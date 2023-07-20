@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* reset styles */
+
+body {
+  margin: 0;
+  font-family: 'Mulish', 'sans-serif';
+  color: white;
+  background-color: black;
+  /* height: 100vh; */
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+  padding: 50px;
+  transition: transform 0.5s linear;
+  transform-origin: top left;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: #379379;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.circle button#open {
+  top: 60%;
+  left: 60%;
+}
+
+.circle button#close {
+  top: 50%;
+  left: 15%;
+  transform: rotate(20deg);
+}
+
+.circle.show-nav {
+  transform: rotate(-90deg);
+}
+
+.content {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+/* .content img {
+  z-index: 100;
+} */
+
+nav {
+  position: fixed;
+  z-index: -1;
+  bottom: 40px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  position: absolute;
+  bottom: 20px;
+
+}
+
+nav ul li {
+  margin: 15px;
+  margin-left: 0px;
+  transition: transform 0.5s linear 0.5s;
+  transform: translateX(-200px);
+}
+
+.container.show-nav + nav ul li {
+  transform: translateX(0);
+}
+
+nav ul li i {
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 30px;
+  transform: translateX(-250px);
+}
+
+nav ul li + li + li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 50px;
+  transform: translateX(-300px);
+}
