@@ -1,0 +1,144 @@
+@import url('../default-styles.css');
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  letter-spacing: 0.2rem;
+  font-family: 'Odibee Sans', 'san-serif';
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.xbox-container {
+  background-image: url('https://images.unsplash.com/photo-1602610423018-9b72909e9f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMxfHx4Ym94fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60');
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  transition: width 0.5s ease;
+  will-change: flex;
+}
+
+.xbox-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+}
+
+
+.xbox-content {
+  z-index: 100;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.xbox-content p {
+  color: white;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.buy-btn {
+  padding: .8rem 3rem;
+  font-size: 2rem;
+  color: white;
+  background: transparent;
+  border-color: white;
+  border-style: solid;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.buy-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.buy-btn:active {
+  transform: scale(0.98);
+}
+
+
+.ps5-container {
+  background-image: url('https://images.unsplash.com/photo-1605296830686-5d00d8d69b96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBzNXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60');
+  height: 100%;
+  width: 50%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.5s ease;
+}
+
+.ps5-screen {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: 0.4;
+}
+
+.ps5-content {
+  display: flex;
+  flex-direction: column;
+  height: 8rem;
+  z-index: 100;
+  justify-content: space-between;
+  transition: transform 0.5s ease;
+}
+
+.ps5-content p {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.ps5-content button {
+  color: black;
+  padding: 0.8rem 1rem;
+  border-color: black;
+}
+
+.ps5-content button:hover {
+  background-color: black;
+  color: white;
+}
+
+.ps5-content button:active {
+  transform: scale(0.98);
+}
+
+.hover-left .xbox-container {
+  width: 60vw;
+}
+.hover-left .ps5-container {
+  width: 40vw;
+}
+.hover-right .ps5-container {
+  width: 60vw;
+}
+.hover-right .xbox-container {
+  width: 40vw;
+}
+/* .xbox/ */
