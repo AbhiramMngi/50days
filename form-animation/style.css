@@ -1,0 +1,103 @@
+@import url('../default-styles.css');
+
+body {
+  font-family: 'Mulish', 'sans-serif';
+  height: 100vh;
+  width: 100vw;
+  background-color: steelblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+  background-color: #1D354A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 500px;
+  width: 450px;
+  border-radius: 8px;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-between;
+}
+
+#title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  border: none;
+  height: 2rem;
+  color: white;
+  border-bottom-style: solid;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  display: flex;
+  justify-content: flex-start;
+  margin: 4px;
+}
+
+.details {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#email {
+  /* margin-top: 1rem; */
+}
+
+#login {
+  background-color: lightblue;
+  border: none;
+  font-size: 1.4rem;
+  height: 3.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+#login:active {
+  transform: scale(0.98);
+}
+
+span {
+  transform: translateY(35px);
+}
+
+span.clicked {
+  transform: translateY(0);
+  color: lightblue;
+}
+
+input.clicked {
+  border-color: lightblue;
+}
+
+
+a {
+  text-decoration: none;
+  color: lightblue;
+  margin: 0 3px;
+  cursor: pointer;
+}
