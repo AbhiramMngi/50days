@@ -14,6 +14,7 @@ body {
 
 .container {
   background-color: #1D354A;
+  
   display: flex;
   justify-content: center;
   align-items: center;

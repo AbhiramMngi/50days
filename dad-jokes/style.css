@@ -1,0 +1,60 @@
+@import url('../default-styles.css');
+
+:root {
+  --primary-color: #425f82;
+  --container-color: white;
+  --primary-font:  'Mulish';
+  --disabled-color: #9d9fa3;
+}
+
+body {
+  background-image: linear-gradient(var(--container-color), var(--primary-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--primary-font);
+}
+
+.container {
+  background-color: var(--container-color);
+  min-height: 40vh;
+  max-width: 90vw;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem auto;
+  color: var(--primary-color);
+}
+
+.joke {
+  font-size: 1.5rem;
+  margin: 1rem 3rem;
+  text-align: center;
+}
+
+.next-joke button{
+  padding: 15px 60px;
+  font-size: 1.25rem;
+  margin: 2rem auto;
+  background-color: var(--primary-color);
+  color: var(--container-color);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.next-joke button:active {
+  transform: scale(0.95);
+}
+
+.next-joke button:active {
+  background-color: var(--disabled-color);
+  color: var(--primary-color);
+}
